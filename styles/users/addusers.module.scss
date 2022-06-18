@@ -1,0 +1,109 @@
+@import "../var.scss";
+.form {
+  h1 {
+    color: $white;
+
+    font-weight: 200;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  input,
+  button {
+    border: none;
+    color: $white;
+  }
+  input {
+    padding: 1em;
+    border-radius: 0.5em;
+    background: $black;
+    border: 2px solid $white;
+    outline: none;
+  }
+  button {
+    padding: 0.7em 1em;
+    border-radius: 10em;
+    margin-left: 0.5em;
+    cursor: pointer;
+    background: $blue;
+  }
+}
+.infos {
+  margin-top: auto;
+  padding-bottom: 0.7em;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  & > p {
+    color: $white;
+
+    font-size: 1.2rem;
+    padding-right: 1em;
+    margin-block: auto;
+  }
+  & > div {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    color: $white;
+    &.nothing {
+      background: $grey3;
+    }
+    &.notify {
+      background: $blue;
+    }
+    ul {
+      position: absolute;
+      bottom: -12.5em;
+      background: $black;
+      border-radius: 0.5em;
+      cursor: auto;
+      height: 11.5em;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: 0.2s;
+      &::-webkit-scrollbar {
+        width: 8px;
+        background: $grey;
+        border-radius: 1em;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $grey3;
+        border-radius: 1em;
+      }
+      &.fadeIn {
+        z-index: 1;
+        opacity: 1;
+      }
+      &.fadeOut {
+        z-index: -1;
+        opacity: 0;
+      }
+      li {
+        padding: 1em 1.5em;
+
+        letter-spacing: 1px;
+        border-bottom: 1px solid $black2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        span {
+          padding-inline: 1em;
+          color: $white2;
+        }
+        div {
+          cursor: pointer;
+          width: 1.7em;
+          height: 1.7em;
+          background: $red;
+          display: grid;
+          place-items: center;
+          border-radius: 0.5em;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

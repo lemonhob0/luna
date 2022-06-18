@@ -1,0 +1,17 @@
+@import "../var.scss";
+.users {
+  & > div {
+    margin-top: 2em;
+  }
+  .addusers {
+    width: 70%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .userslist {
+    width: 90%;
+    margin-inline: auto;
+    border: 1px solid $grey3;
+  }
+}

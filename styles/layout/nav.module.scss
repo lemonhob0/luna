@@ -1,0 +1,49 @@
+@import "../var.scss";
+.nav {
+  width: 20%;
+  height: 100vh;
+  background: $black;
+  p {
+    text-align: center;
+    padding: 0.7em;
+    color: $white;
+    font-size: 1.3rem;
+
+    border-bottom: 1px solid $black2;
+    cursor: pointer;
+    &:hover {
+      background: $grey3;
+    }
+  }
+  ul {
+    color: $grey;
+
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 0.5em;
+    li {
+      padding: 1em 0.5em;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: $blue;
+        border-radius: 1em;
+        transition: 0.2s;
+      }
+      &.s,
+      &:hover {
+        color: $blue;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
